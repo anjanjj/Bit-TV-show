@@ -41,7 +41,7 @@ function createMovies(data) {
 function searchQueryData() {
   if (searchInput.value !== "") {
     container.style.display = "block";
-    fetch(`http://api.tvmaze.com/search/shows?q=${searchInput.value}`)
+    fetch(`https://api.tvmaze.com/search/shows?q=${searchInput.value}`)
       .then((res) => res.json())
       .then((data) => {
         container.innerHTML = "";
@@ -64,7 +64,7 @@ function createMoviesForBtnEvent(e) {
     console.log(searchInput.value);
     gridMovies.innerHTML = "";
     container.style.display = "none";
-    fetch(`http://api.tvmaze.com/search/shows?q=${searchInput.value}`)
+    fetch(`https://api.tvmaze.com/search/shows?q=${searchInput.value}`)
       .then((res) => res.json())
       .then((data) => {
         console.log(data);

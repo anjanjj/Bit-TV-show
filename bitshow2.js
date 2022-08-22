@@ -10,7 +10,7 @@ let cast = document.querySelector(".cast");
 
 var searchInput = document.querySelector("#search");
 function getThatMovie() {
-  fetch(`http://api.tvmaze.com/shows/${id}`)
+  fetch(`https://api.tvmaze.com/shows/${id}`)
     .then((res) => res.json())
     .then((data) => {
       console.log(data);
@@ -30,7 +30,7 @@ function getThatMovie() {
 function searchQueryData() {
   if (searchInput.value !== "") {
     container.style.display = "block";
-    fetch(`http://api.tvmaze.com/search/shows?q=${searchInput.value}`)
+    fetch(`https://api.tvmaze.com/search/shows?q=${searchInput.value}`)
       .then((res) => res.json())
       .then((data) => {
         container.innerHTML = "";
