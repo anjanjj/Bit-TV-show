@@ -7,7 +7,7 @@ var container = document.querySelector(".container");
 
 function fetchData() {
   gridMovies.innerHTML = "";
-  fetch(`http://api.tvmaze.com/shows`)
+  fetch(`https://api.tvmaze.com/shows`)
     .then((res) => res.json())
     .then((data) => {
       createMovies(data);
