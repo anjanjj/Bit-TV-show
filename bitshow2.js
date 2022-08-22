@@ -88,6 +88,6 @@ document.body.addEventListener("click", function (e) {
 });
 const homeTitle = document.querySelectorAll("h2")[0];
 homeTitle.addEventListener("click", function () {
-  window.location.href = "./bitshow.html";
+  window.location.href = "./index.html";
 });
 getThatMovie();
